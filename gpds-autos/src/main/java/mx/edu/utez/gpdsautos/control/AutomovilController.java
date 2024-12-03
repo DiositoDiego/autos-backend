@@ -42,7 +42,7 @@ public class AutomovilController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/d/{id}")
     public ResponseEntity<Void> deleteAutomovil(@PathVariable Long id) {
         if (automovilService.getAutomovilById(id).isPresent()) {
             automovilService.deleteAutomovil(id);
